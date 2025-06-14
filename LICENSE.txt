@@ -1,0 +1,17 @@
+Licença de Uso – InfrastructureToolKit
+
+Copyright (C) 2025 Febbe Assessoria. Todos os direitos reservados.
+
+Este software é distribuído gratuitamente apenas em formato binário (DLL/NuGet).
+Você pode utilizá-lo em projetos pessoais ou comerciais sem custo, desde que:
+
+1. Não modifique, descompile ou realize engenharia reversa sobre este software;
+2. Não redistribua ou reempacote este software sem autorização explícita;
+3. Mantenha estes termos de licença intactos.
+
+Doações são bem-vindas para apoiar o desenvolvimento contínuo.
+Versões futuras com funcionalidades adicionais poderão ser disponibilizadas mediante planos pagos (standard, enterprise, etc.).
+
+Este software é fornecido "como está", sem garantias de qualquer tipo, expressas ou implícitas.
+
+Contato: [lucianofebbedossantos@gmail.com]

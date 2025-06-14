@@ -1,0 +1,64 @@
+## Ignore for .NET and Visual Studio ##
+
+# Build results
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code settings
+.idea/
+.vscode/
+
+# Visual Studio local settings (inclui *.vsidx)
+.vs/
+*.vsidx
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.dbmdl
+*.log
+*.pidb
+*.svclog
+*.sdf
+*.cache
+*.pdb
+*.mdb
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuspec
+
+# Others
+*.DS_Store
+*.bak
+*.tmp
+*.old
+*.orig
+*.rej
+*.scc
+
+# Log files
+*.log
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+*.testresult.xml
+
+# Publish folder
+publish/
+wwwroot/dist/
