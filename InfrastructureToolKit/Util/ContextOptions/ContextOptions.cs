@@ -7,7 +7,7 @@ namespace InfrastructureToolKit.Util.ContextOptions
     /// Essa classe possui implementacao dos seguintes drivers
     /// Microsoft.EntityFrameworkCore(8.0.6)
     /// Microsoft.EntityFrameworkCore.SqLite(8.0.16)
-    /// Microsoft.EntityFrameworkCore.SqServer(8.0.16)
+    /// Microsoft.EntityFrameworkCore.SqlServer(8.0.16)
     /// Microsoft.EntityFrameworkCore.PostgreSql(8.0.11)
     /// Microsoft.EntityFrameworkCore.MySql(8.0.3)
     /// Para acesso a dos a banco de dados que nao estao disponiveis aqui,

@@ -1,10 +1,8 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.EntityFramework.Context;
 using InfrastructureToolKit.DataBase.EntityFramework.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.EntityFramework.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using System.Linq.Expressions;
 
 namespace InfrastructureToolKit.DataBase.EntityFramework.UnitOfWork
 {

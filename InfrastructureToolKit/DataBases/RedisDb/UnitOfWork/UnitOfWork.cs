@@ -159,10 +159,13 @@ namespace InfrastructureToolKit.DataBase.RedisDb.UnitOfWork
         {
             var list = new List<T>();
 
-            if (result == null || result.Type != ResultType.MultiBulk || result.Length < 3)
+            if (result == null || result.Type != ResultType.MultiBulk)
                 return list;
 
             var results = (RedisResult[])result;
+
+            if (results.Length < 3)
+                return list;
 
             for (int i = 1; i < results.Length; i += 2)
             {
