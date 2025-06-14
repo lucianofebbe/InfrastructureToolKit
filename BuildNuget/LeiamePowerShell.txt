@@ -1,6 +1,0 @@
-Para gerar o pacote do nuget da infra
-
-Abra o powerShell como Administrador e venha com ele ate esse diretorio.
-rode o comando no powerShell como administrador .\BuildAndCopy.ps1
-vai ser compilado o projeto InfrastructureToolKit e sera gerado o arquivo para a nuget
-na pasta Nuget
