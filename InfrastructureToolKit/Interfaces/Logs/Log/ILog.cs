@@ -1,4 +1,4 @@
-﻿using InfrastructureToolKit.Logs.Settings;
+﻿using InfrastructureToolKit.Settings.Logs.Settings;
 
 namespace InfrastructureToolKit.Interfaces.Logs.Log
 {

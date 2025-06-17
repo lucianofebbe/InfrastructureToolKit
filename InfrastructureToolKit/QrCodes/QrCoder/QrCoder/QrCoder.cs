@@ -1,7 +1,5 @@
 ﻿using InfrastructureToolKit.Interfaces.QrCodes.QrCoder;
-using InfrastructureToolKit.QrCodes.QrCoder.Settings;
-using QRCoder;
-using System.Drawing;
+using InfrastructureToolKit.Settings.QrCodes.QrCoder.Settings;
 
 namespace InfrastructureToolKit.QrCodes.QrCoder.QrCoder
 {

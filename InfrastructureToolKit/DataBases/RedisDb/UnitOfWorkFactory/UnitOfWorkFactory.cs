@@ -1,10 +1,10 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.RedisDb.Settings;
-using InfrastructureToolKit.DataBase.RedisDb.UnitOfWork;
+using InfrastructureToolKit.DataBases.RedisDb.UnitOfWork;
 using InfrastructureToolKit.Interfaces.DataBase.RedisDb.UnitOfWork;
 using InfrastructureToolKit.Interfaces.DataBase.RedisDb.UnitOfWorkFactory;
+using InfrastructureToolKit.Settings.DataBases.RedisDb.Settings;
 
-namespace InfrastructureToolKit.DataBase.RedisDb.UnitOfWorkFactory
+namespace InfrastructureToolKit.DataBases.RedisDb.UnitOfWorkFactory
 {
     public class UnitOfWorkFactory<T> : IUnitOfWorkFactory<T> where T : BaseEntitiesRedisDb
     {

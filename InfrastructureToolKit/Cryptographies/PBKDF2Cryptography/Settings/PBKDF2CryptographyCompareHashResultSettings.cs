@@ -1,7 +1,0 @@
-﻿namespace InfrastructureToolKit.Cryptographies.PBKDF2Cryptography.Settings
-{
-    public record PBKDF2CryptographyCompareHashResultSettings
-    {
-        public bool Result { get; set; }
-    }
-}

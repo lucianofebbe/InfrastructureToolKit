@@ -1,4 +1,4 @@
-﻿using InfrastructureToolKit.Schedulers.Quartz.Settings;
+﻿using InfrastructureToolKit.Settings.Schedulers.Quartz.Settings;
 
 namespace InfrastructureToolKit.Interfaces.Schedulers.Quartz.Scheduler
 {

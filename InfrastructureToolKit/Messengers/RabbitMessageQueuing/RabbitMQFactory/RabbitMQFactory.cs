@@ -3,7 +3,7 @@ using InfrastructureToolKit.Interfaces.Messengers.RabbitMessageQueuing.Factory;
 using InfrastructureToolKit.Interfaces.Messengers.RabbitMessageQueuing.RequestReply;
 using InfrastructureToolKit.Messengers.RabbitMessageQueuing.Default;
 using InfrastructureToolKit.Messengers.RabbitMessageQueuing.RequestReply;
-using InfrastructureToolKit.Messengers.RabbitMessageQueuing.Settings;
+using InfrastructureToolKit.Settings.Messengers.RabbitMessageQueuing.Settings;
 
 namespace InfrastructureToolKit.Messengers.RabbitMessageQueuing.RabbitMQFactory
 {

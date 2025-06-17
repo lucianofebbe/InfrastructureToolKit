@@ -1,11 +1,11 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.AdoNet.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.AdoNet.Ado;
+using InfrastructureToolKit.Settings.DataBases.AdoNet.Settings;
 using System.Data;
 using System.Data.Common;
 using System.Reflection;
 
-namespace InfrastructureToolKit.DataBase.AdoNet
+namespace InfrastructureToolKit.DataBases.AdoNet.Ado
 {
     public class Ado<T> : IAdo<T> where T : BaseEntitiesSql
     {

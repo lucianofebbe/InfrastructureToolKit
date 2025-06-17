@@ -1,7 +1,7 @@
 ﻿using InfrastructureToolKit.Emails.Email;
-using InfrastructureToolKit.Emails.Settings;
 using InfrastructureToolKit.Interfaces.Emails.Email;
 using InfrastructureToolKit.Interfaces.Emails.EmailFactory;
+using InfrastructureToolKit.Settings.Emails.Settings;
 
 namespace InfrastructureToolKit.Emails.EmailFactory
 {

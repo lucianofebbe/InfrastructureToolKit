@@ -1,10 +1,10 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.Dapper.Settings;
-using InfrastructureToolKit.DataBase.Dapper.UnitOfWork;
+using InfrastructureToolKit.DataBases.Dapper.UnitOfWork;
 using InfrastructureToolKit.Interfaces.DataBase.Dapper.UnitOfWork;
 using InfrastructureToolKit.Interfaces.DataBase.Dapper.UnitOfWorkFactory;
+using InfrastructureToolKit.Settings.DataBases.Dapper.Settings;
 
-namespace InfrastructureToolKit.DataBase.Dapper.UnitOfWorkFactory
+namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWorkFactory
 {
     public class UnitOfWorkFactory<T> : IUnitOfWorkFactory<T>
         where T : BaseEntitiesSql

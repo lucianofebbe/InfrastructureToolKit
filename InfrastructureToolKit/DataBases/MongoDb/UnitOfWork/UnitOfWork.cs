@@ -1,10 +1,10 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.MongoDb.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.MongoDb.UnitOfWork;
+using InfrastructureToolKit.Settings.DataBases.MongoDb.Settings;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace InfrastructureToolKit.DataBase.MongoDb.UnitOfWork
+namespace InfrastructureToolKit.DataBases.MongoDb.UnitOfWork
 {
     public class UnitOfWork<T> : IUnitOfWork<T> where T : BaseEntitiesMongoDb
     {

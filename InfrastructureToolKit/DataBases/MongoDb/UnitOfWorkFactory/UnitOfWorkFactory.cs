@@ -1,10 +1,10 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.MongoDb.Settings;
-using InfrastructureToolKit.DataBase.MongoDb.UnitOfWork;
+using InfrastructureToolKit.DataBases.MongoDb.UnitOfWork;
 using InfrastructureToolKit.Interfaces.DataBase.MongoDb.UnitOfWork;
 using InfrastructureToolKit.Interfaces.DataBase.MongoDb.UnitOfWorkFactory;
+using InfrastructureToolKit.Settings.DataBases.MongoDb.Settings;
 
-namespace InfrastructureToolKit.DataBase.MongoDb.UnitOfWorkFactory
+namespace InfrastructureToolKit.DataBases.MongoDb.UnitOfWorkFactory
 {
     public class UnitOfWorkFactory<T> : IUnitOfWorkFactory<T> where T : BaseEntitiesMongoDb
     {

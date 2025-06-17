@@ -1,4 +1,5 @@
-﻿using InfrastructureToolKit.Interfaces.Apis.ApiExternal;
+﻿using InfrastructureToolKit.Apis.ApiExternal;
+using InfrastructureToolKit.Interfaces.Apis.ApiExternal;
 using InfrastructureToolKit.Interfaces.Apis.ApiExternalFactory;
 
 namespace InfrastructureToolKit.Apis.ApiExternalFactory

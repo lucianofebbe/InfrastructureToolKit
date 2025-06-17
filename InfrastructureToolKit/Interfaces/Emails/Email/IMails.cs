@@ -1,4 +1,4 @@
-﻿using InfrastructureToolKit.Emails.Settings;
+﻿using InfrastructureToolKit.Settings.Emails.Settings;
 
 namespace InfrastructureToolKit.Interfaces.Emails.Email
 {

@@ -1,6 +1,6 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.RedisDb.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.RedisDb.UnitOfWork;
+using InfrastructureToolKit.Settings.DataBases.RedisDb.Settings;
 
 namespace InfrastructureToolKit.Interfaces.DataBase.RedisDb.UnitOfWorkFactory
 {

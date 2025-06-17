@@ -1,5 +1,5 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.Dapper.Settings;
+using InfrastructureToolKit.Settings.DataBases.Dapper.Settings;
 
 namespace InfrastructureToolKit.Interfaces.DataBase.Dapper.UnitOfWork
 {

@@ -1,6 +1,6 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.EntityFramework.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.EntityFramework.UnitOfWork;
+using InfrastructureToolKit.Settings.DataBases.EntityFramework.Settings;
 
 namespace InfrastructureToolKit.Interfaces.DataBase.EntityFramework.UnitOfWorkFactory
 {

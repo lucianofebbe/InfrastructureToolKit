@@ -8,7 +8,7 @@ namespace InfrastructureToolKit.Logs.LogFactory
         // Cria um ILog usando as configurações recebidas como parâmetro
         public Task<ILog> Create()
         {
-            ILog log = new Log();
+            ILog log = new Log.Log();
             return Task.FromResult(log);
         }
     }

@@ -1,5 +1,5 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.AdoNet.Settings;
+using InfrastructureToolKit.Settings.DataBases.AdoNet.Settings;
 using System.Data;
 
 namespace InfrastructureToolKit.Interfaces.DataBase.AdoNet.Ado

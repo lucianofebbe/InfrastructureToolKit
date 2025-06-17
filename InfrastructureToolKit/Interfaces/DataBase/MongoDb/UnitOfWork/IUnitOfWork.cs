@@ -1,5 +1,5 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.MongoDb.Settings;
+using InfrastructureToolKit.Settings.DataBases.MongoDb.Settings;
 
 namespace InfrastructureToolKit.Interfaces.DataBase.MongoDb.UnitOfWork
 {

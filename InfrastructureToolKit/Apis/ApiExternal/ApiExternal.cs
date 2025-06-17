@@ -1,7 +1,7 @@
 ﻿using InfrastructureToolKit.Interfaces.Apis.ApiExternal;
 using System.Text.Json;
 
-namespace InfrastructureToolKit.Apis
+namespace InfrastructureToolKit.Apis.ApiExternal
 {
     /// <summary>
     /// Implementação genérica para consumo de APIs externas via HTTP.

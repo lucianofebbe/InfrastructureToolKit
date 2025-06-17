@@ -1,8 +1,8 @@
 ﻿using InfrastructureToolKit.Interfaces.Logs.Log;
-using InfrastructureToolKit.Logs.Settings;
+using InfrastructureToolKit.Settings.Logs.Settings;
 using System.Text;
 
-namespace InfrastructureToolKit.Logs
+namespace InfrastructureToolKit.Logs.Log
 {
     public class Log : ILog
     {

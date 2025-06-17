@@ -1,5 +1,5 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.RedisDb.Settings;
+using InfrastructureToolKit.Settings.DataBases.RedisDb.Settings;
 
 namespace InfrastructureToolKit.Interfaces.DataBase.RedisDb.UnitOfWork
 {

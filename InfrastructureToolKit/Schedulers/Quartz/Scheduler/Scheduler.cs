@@ -1,10 +1,10 @@
 ﻿using InfrastructureToolKit.Interfaces.Schedulers.Quartz.Scheduler;
-using InfrastructureToolKit.Schedulers.Quartz.Settings;
+using InfrastructureToolKit.Settings.Schedulers.Quartz.Settings;
 using Quartz;
 using Quartz.Impl;
 using System.Collections.Specialized;
 
-namespace InfrastructureToolKit.Schedulers.Quartz
+namespace InfrastructureToolKit.Schedulers.Quartz.Scheduler
 {
     // Implementação do agendador de tarefas utilizando o Quartz.NET
     public class Scheduler : InterfaceScheduler

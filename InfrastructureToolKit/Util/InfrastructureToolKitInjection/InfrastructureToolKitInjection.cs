@@ -23,6 +23,10 @@ using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Bson.Serialization;
+using InfrastructureToolKit.DataBases.RedisDb.UnitOfWorkFactory;
+using InfrastructureToolKit.DataBases.EntityFramework.UnitOfWorkFactory;
+using InfrastructureToolKit.DataBases.Dapper.UnitOfWorkFactory;
+using InfrastructureToolKit.DataBases.MongoDb.UnitOfWorkFactory;
 
 
 namespace InfrastructureToolKit.Util.InfrastructureToolKitInjection
@@ -33,10 +37,10 @@ namespace InfrastructureToolKit.Util.InfrastructureToolKitInjection
         {
             services.AddScoped(typeof(IApiExternalFactory<>), typeof(ApiExternalFactory<>));
             services.AddScoped(typeof(ICryptographyFactory), typeof(CryptographyFactory));
-            services.AddScoped(typeof(Interfaces.DataBase.Dapper.UnitOfWorkFactory.IUnitOfWorkFactory<>), typeof(DataBase.Dapper.UnitOfWorkFactory.UnitOfWorkFactory<>));
-            services.AddScoped(typeof(Interfaces.DataBase.EntityFramework.UnitOfWorkFactory.IUnitOfWorkFactory<>), typeof(DataBase.EntityFramework.UnitOfWorkFactory.UnitOfWorkFactory<>));
-            services.AddScoped(typeof(Interfaces.DataBase.MongoDb.UnitOfWorkFactory.IUnitOfWorkFactory<>), typeof(DataBase.MongoDb.UnitOfWorkFactory.UnitOfWorkFactory<>));
-            services.AddScoped(typeof(Interfaces.DataBase.RedisDb.UnitOfWorkFactory.IUnitOfWorkFactory<>), typeof(DataBase.RedisDb.UnitOfWorkFactory.UnitOfWorkFactory<>));
+            services.AddScoped(typeof(Interfaces.DataBase.Dapper.UnitOfWorkFactory.IUnitOfWorkFactory<>), typeof(DataBases.Dapper.UnitOfWorkFactory.UnitOfWorkFactory<>));
+            services.AddScoped(typeof(Interfaces.DataBase.EntityFramework.UnitOfWorkFactory.IUnitOfWorkFactory<>), typeof(DataBases.EntityFramework.UnitOfWorkFactory.UnitOfWorkFactory<>));
+            services.AddScoped(typeof(Interfaces.DataBase.MongoDb.UnitOfWorkFactory.IUnitOfWorkFactory<>), typeof(DataBases.MongoDb.UnitOfWorkFactory.UnitOfWorkFactory<>));
+            services.AddScoped(typeof(Interfaces.DataBase.RedisDb.UnitOfWorkFactory.IUnitOfWorkFactory<>), typeof(DataBases.RedisDb.UnitOfWorkFactory.UnitOfWorkFactory<>));
             services.AddScoped(typeof(IEmailFactory), typeof(EmailFactory));
             services.AddScoped(typeof(ILogFactory), typeof(LogFactory));
             services.AddScoped(typeof(IMapperFactory<BaseEntitiesSql, BaseEntitiesMongoDb, BaseEntitiesRedisDb, BaseRequest, BaseResponse>), typeof(MapperFactory<BaseEntitiesSql, BaseEntitiesMongoDb, BaseEntitiesRedisDb, BaseRequest, BaseResponse>));

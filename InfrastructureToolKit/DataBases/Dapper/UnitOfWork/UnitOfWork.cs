@@ -1,10 +1,10 @@
 ﻿using Dapper;
 using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.Dapper.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.Dapper.UnitOfWork;
+using InfrastructureToolKit.Settings.DataBases.Dapper.Settings;
 using System.Data;
 
-namespace InfrastructureToolKit.DataBase.Dapper.UnitOfWork
+namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWork
 {
     public class UnitOfWork<T> : IUnitOfWork<T> where T : BaseEntitiesSql
     {
@@ -20,8 +20,8 @@ namespace InfrastructureToolKit.DataBase.Dapper.UnitOfWork
         // Construtor que recebe a conexão e o CancellationToken, já abre a conexão
         public UnitOfWork(ConnectionSettings settings)
         {
-            this.connection = settings.Connection;
-            this.connection.Open();
+            connection = settings.Connection;
+            connection.Open();
         }
 
         // Insere uma entidade usando o SQL passado, retorna a entidade com o Id atualizado

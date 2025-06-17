@@ -1,10 +1,10 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.EntityFramework.Settings;
-using InfrastructureToolKit.DataBase.EntityFramework.UnitOfWork;
+using InfrastructureToolKit.DataBases.EntityFramework.UnitOfWork;
 using InfrastructureToolKit.Interfaces.DataBase.EntityFramework.UnitOfWork;
 using InfrastructureToolKit.Interfaces.DataBase.EntityFramework.UnitOfWorkFactory;
+using InfrastructureToolKit.Settings.DataBases.EntityFramework.Settings;
 
-namespace InfrastructureToolKit.DataBase.EntityFramework.UnitOfWorkFactory
+namespace InfrastructureToolKit.DataBases.EntityFramework.UnitOfWorkFactory
 {
     public class UnitOfWorkFactory<T> : IUnitOfWorkFactory<T>
         where T : BaseEntitiesSql

@@ -1,5 +1,5 @@
 ﻿using InfrastructureToolKit.Interfaces.Telemetrys.OpenTelemetry.Telemetry;
-using InfrastructureToolKit.Telemetrys.OpenTelemetry.Settings;
+using InfrastructureToolKit.Settings.Telemetrys.OpenTelemetry.Settings;
 using Microsoft.Extensions.DependencyInjection;
 using OpenTelemetry;
 using OpenTelemetry.Context.Propagation;

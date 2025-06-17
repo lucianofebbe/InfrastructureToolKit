@@ -1,4 +1,4 @@
-﻿using InfrastructureToolKit.DataBase.EntityFramework.Context;
+﻿using InfrastructureToolKit.DataBases.EntityFramework.Context;
 using Microsoft.EntityFrameworkCore;
 using ServerVersion = Microsoft.EntityFrameworkCore.ServerVersion;
 namespace InfrastructureToolKit.Util.ContextOptions

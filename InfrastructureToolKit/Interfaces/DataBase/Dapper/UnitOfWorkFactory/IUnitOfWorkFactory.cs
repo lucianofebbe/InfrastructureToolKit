@@ -1,6 +1,6 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.Dapper.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.Dapper.UnitOfWork;
+using InfrastructureToolKit.Settings.DataBases.Dapper.Settings;
 
 namespace InfrastructureToolKit.Interfaces.DataBase.Dapper.UnitOfWorkFactory
 {

@@ -1,6 +1,5 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.EntityFramework.Settings;
-using System.Linq.Expressions;
+using InfrastructureToolKit.Settings.DataBases.EntityFramework.Settings;
 
 namespace InfrastructureToolKit.Interfaces.DataBase.EntityFramework.UnitOfWork
 {

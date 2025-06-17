@@ -1,4 +1,4 @@
-﻿using InfrastructureToolKit.Cryptographies.AesCryptography.Settings;
+﻿using InfrastructureToolKit.Settings.Cryptographies.AesCryptography.Settings;
 
 namespace InfrastructureToolKit.Interfaces.Cryptographies.AesCryptography
 {

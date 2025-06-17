@@ -1,10 +1,10 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.AdoNet;
-using InfrastructureToolKit.DataBase.AdoNet.Settings;
+using InfrastructureToolKit.DataBases.AdoNet.Ado;
 using InfrastructureToolKit.Interfaces.DataBase.AdoNet.Ado;
 using InfrastructureToolKit.Interfaces.DataBase.AdoNet.AdoFactory;
+using InfrastructureToolKit.Settings.DataBases.AdoNet.Settings;
 
-namespace InfrastructureToolKit.DataBase.AdoNetFactory
+namespace InfrastructureToolKit.DataBases.AdoNet.AdoFactory
 {
     public class AdoFactory<T> : IAdoFactory<T> where T : BaseEntitiesSql
     {

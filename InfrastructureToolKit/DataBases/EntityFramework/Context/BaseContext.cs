@@ -1,7 +1,7 @@
 ﻿using InfrastructureToolKit.Interfaces.DataBase.EntityFramework.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace InfrastructureToolKit.DataBase.EntityFramework.Context
+namespace InfrastructureToolKit.DataBases.EntityFramework.Context
 {
     // Contexto base para EF Core, implementa interface IContext
     public class BaseContext : DbContext, IContext

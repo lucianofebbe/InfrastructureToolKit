@@ -1,5 +1,5 @@
-﻿using InfrastructureToolKit.Emails.Settings;
-using InfrastructureToolKit.Interfaces.Emails.Email;
+﻿using InfrastructureToolKit.Interfaces.Emails.Email;
+using InfrastructureToolKit.Settings.Emails.Settings;
 using System.Net;
 using System.Net.Mail;
 

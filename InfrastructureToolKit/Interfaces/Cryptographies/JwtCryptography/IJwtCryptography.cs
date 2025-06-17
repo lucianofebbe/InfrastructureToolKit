@@ -1,4 +1,4 @@
-﻿using InfrastructureToolKit.Cryptographies.JwtCryptography.Settings;
+﻿using InfrastructureToolKit.Settings.Cryptographies.JwtCryptography.Settings;
 
 namespace InfrastructureToolKit.Interfaces.Cryptographies.JwtCryptography
 {

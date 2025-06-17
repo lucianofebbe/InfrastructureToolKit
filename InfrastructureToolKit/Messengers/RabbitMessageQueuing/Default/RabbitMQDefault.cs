@@ -1,5 +1,5 @@
 ﻿using InfrastructureToolKit.Interfaces.Messengers.RabbitMessageQueuing.Default;
-using InfrastructureToolKit.Messengers.RabbitMessageQueuing.Settings;
+using InfrastructureToolKit.Settings.Messengers.RabbitMessageQueuing.Settings;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Collections.Concurrent;

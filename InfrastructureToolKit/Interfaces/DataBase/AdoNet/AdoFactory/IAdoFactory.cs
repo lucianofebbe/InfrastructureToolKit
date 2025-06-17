@@ -1,6 +1,6 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.AdoNet.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.AdoNet.Ado;
+using InfrastructureToolKit.Settings.DataBases.AdoNet.Settings;
 
 namespace InfrastructureToolKit.Interfaces.DataBase.AdoNet.AdoFactory
 {

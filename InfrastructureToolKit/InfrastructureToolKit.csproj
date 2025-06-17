@@ -26,7 +26,38 @@
     <PackageReference Include="QRCoder" Version="1.6.0" />
     <PackageReference Include="Quartz" Version="3.14.0" />
     <PackageReference Include="RabbitMQ.Client" Version="7.1.2" />
+    <PackageReference Include="SkiaSharp" Version="3.119.0" />
     <PackageReference Include="System.Drawing.Common" Version="9.0.6" />
+    <PackageReference Include="ZXing.Net" Version="0.16.10" />
+    <PackageReference Include="ZXing.Net.Bindings.SkiaSharp" Version="0.16.21" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AudioAndVideo\MediaStream\MediaStreamFactory\" />
+    <Folder Include="Interfaces\QuestPDF\QuestPDFFactory\" />
+    <Folder Include="Interfaces\QuestPDF\QuestPDF\" />
+    <Folder Include="Pdfs\QuestPDF\QuestPDFFactory\" />
+    <Folder Include="Pdfs\QuestPDF\QuestPDF\" />
+    <Folder Include="Settings\Pdfs\QuestPDF\Settings\" />
+  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>InfrastructureToolKit</PackageId>
+		<Version>1.1.9</Version>
+		<Authors>Luciano Santos</Authors>
+		<Company>MinhaEmpresa</Company>
+		<Description>Pacote NuGet para InfrastructureToolKit</Description>
+		<PackageTags>infraestrutura; toolkit; net</PackageTags>
+		<PackageProjectUrl>https://github.com/lucianosantos/InfrastructureToolKit</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageReleaseNotes>Primeira versão estável do pacote InfrastructureToolKit.</PackageReleaseNotes>
+		<IncludeDocumentationFile>true</IncludeDocumentationFile>
+		<!--<PackageIcon>icon.png</PackageIcon>-->
+		<!--<PackageIconUrl>https://raw.githubusercontent.com/lucianosantos/InfrastructureToolKit/main/icon.png</PackageIconUrl>-->
+	</PropertyGroup>
+
 
 </Project>

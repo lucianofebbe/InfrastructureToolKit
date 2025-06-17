@@ -1,10 +1,10 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.EntityFramework.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.EntityFramework.UnitOfWork;
+using InfrastructureToolKit.Settings.DataBases.EntityFramework.Settings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace InfrastructureToolKit.DataBase.EntityFramework.UnitOfWork
+namespace InfrastructureToolKit.DataBases.EntityFramework.UnitOfWork
 {
     public class UnitOfWork<T> : IUnitOfWork<T>
         where T : BaseEntitiesSql

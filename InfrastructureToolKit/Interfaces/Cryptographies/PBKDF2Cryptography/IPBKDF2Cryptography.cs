@@ -1,4 +1,4 @@
-﻿using InfrastructureToolKit.Cryptographies.PBKDF2Cryptography.Settings;
+﻿using InfrastructureToolKit.Settings.Cryptographies.PBKDF2Cryptography.Settings;
 
 namespace InfrastructureToolKit.Interfaces.Cryptographies.PBKDF2Cryptography
 {

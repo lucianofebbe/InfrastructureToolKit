@@ -1,5 +1,5 @@
 ﻿using InfrastructureToolKit.Interfaces.Messengers.kafkaMessageQueuing.Default;
-using InfrastructureToolKit.Messengers.kafkaMessageQueuing.Settings;
+using InfrastructureToolKit.Settings.Messengers.kafkaMessageQueuing.Settings;
 
 namespace InfrastructureToolKit.Interfaces.Messengers.kafkaMessageQueuing.Factory
 {

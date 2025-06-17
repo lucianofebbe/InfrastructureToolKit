@@ -1,5 +1,5 @@
-﻿using InfrastructureToolKit.Cryptographies.JwtCryptography.Settings;
-using InfrastructureToolKit.Interfaces.Cryptographies.JwtCryptography;
+﻿using InfrastructureToolKit.Interfaces.Cryptographies.JwtCryptography;
+using InfrastructureToolKit.Settings.Cryptographies.JwtCryptography.Settings;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;

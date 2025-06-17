@@ -1,5 +1,5 @@
-﻿using InfrastructureToolKit.Cryptographies.PBKDF2Cryptography.Settings;
-using InfrastructureToolKit.Interfaces.Cryptographies.PBKDF2Cryptography;
+﻿using InfrastructureToolKit.Interfaces.Cryptographies.PBKDF2Cryptography;
+using InfrastructureToolKit.Settings.Cryptographies.PBKDF2Cryptography.Settings;
 using System.Security.Cryptography;
 
 namespace InfrastructureToolKit.Cryptographies.PBKDF2Cryptography

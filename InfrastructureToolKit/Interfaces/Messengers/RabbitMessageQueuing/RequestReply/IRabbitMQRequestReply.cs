@@ -1,4 +1,4 @@
-﻿using InfrastructureToolKit.Messengers.RabbitMessageQueuing.Settings;
+﻿using InfrastructureToolKit.Settings.Messengers.RabbitMessageQueuing.Settings;
 
 namespace InfrastructureToolKit.Interfaces.Messengers.RabbitMessageQueuing.RequestReply
 {

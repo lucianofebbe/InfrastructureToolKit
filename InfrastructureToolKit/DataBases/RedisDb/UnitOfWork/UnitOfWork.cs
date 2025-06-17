@@ -1,13 +1,13 @@
 ﻿using InfrastructureToolKit.Bases.Entities;
-using InfrastructureToolKit.DataBase.RedisDb.Settings;
 using InfrastructureToolKit.Interfaces.DataBase.RedisDb.UnitOfWork;
+using InfrastructureToolKit.Settings.DataBases.RedisDb.Settings;
 using Newtonsoft.Json;
 using NReJSON;
 using StackExchange.Redis;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace InfrastructureToolKit.DataBase.RedisDb.UnitOfWork
+namespace InfrastructureToolKit.DataBases.RedisDb.UnitOfWork
 {
     public class UnitOfWork<T> : IUnitOfWork<T> where T : BaseEntitiesRedisDb
     {

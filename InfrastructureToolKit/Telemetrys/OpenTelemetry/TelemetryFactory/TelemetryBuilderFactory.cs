@@ -1,6 +1,6 @@
 ﻿using InfrastructureToolKit.Interfaces.Telemetrys.OpenTelemetry.Telemetry;
 using InfrastructureToolKit.Interfaces.Telemetrys.OpenTelemetry.TelemetryFactory;
-using InfrastructureToolKit.Telemetrys.OpenTelemetry.Settings;
+using InfrastructureToolKit.Settings.Telemetrys.OpenTelemetry.Settings;
 
 namespace InfrastructureToolKit.Telemetrys.OpenTelemetry.TelemetryFactory
 {

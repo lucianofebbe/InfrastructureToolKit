@@ -1,5 +1,5 @@
-﻿using InfrastructureToolKit.Cryptographies.AesCryptography.Settings;
-using InfrastructureToolKit.Interfaces.Cryptographies.AesCryptography;
+﻿using InfrastructureToolKit.Interfaces.Cryptographies.AesCryptography;
+using InfrastructureToolKit.Settings.Cryptographies.AesCryptography.Settings;
 using System.Security.Cryptography;
 using System.Text;
 
