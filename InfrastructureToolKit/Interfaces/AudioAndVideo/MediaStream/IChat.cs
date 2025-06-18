@@ -1,6 +1,6 @@
 ﻿using InfrastructureToolKit.Settings.AudioAndVideo.MediaStream.Settings;
 
-namespace Interfaces.AudioAndVideo.MediaStream
+namespace InfrastructureToolKit.Interfaces.AudioAndVideo.MediaStream
 {
     public interface IChat
     {

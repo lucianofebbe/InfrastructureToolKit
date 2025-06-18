@@ -1,9 +1,7 @@
-﻿using InfrastructureToolKit.Apis.ApiExternalFactory;
-using InfrastructureToolKit.Bases.Dtos;
+﻿using InfrastructureToolKit.Bases.Dtos;
 using InfrastructureToolKit.Bases.Entities;
 using InfrastructureToolKit.Cryptographies.CryptographyFactory;
 using InfrastructureToolKit.Emails.EmailFactory;
-using InfrastructureToolKit.Interfaces.Apis.ApiExternalFactory;
 using InfrastructureToolKit.Interfaces.Cryptographies.CryptographyFactory;
 using InfrastructureToolKit.Interfaces.Emails.EmailFactory;
 using InfrastructureToolKit.Interfaces.Logs.LogFactory;
@@ -27,6 +25,8 @@ using InfrastructureToolKit.DataBases.RedisDb.UnitOfWorkFactory;
 using InfrastructureToolKit.DataBases.EntityFramework.UnitOfWorkFactory;
 using InfrastructureToolKit.DataBases.Dapper.UnitOfWorkFactory;
 using InfrastructureToolKit.DataBases.MongoDb.UnitOfWorkFactory;
+using InfrastructureToolKit.Interfaces.Apis.ApiExternal.ApiExternalFactory;
+using InfrastructureToolKit.Apis.ApiExternal.ApiExternalFactory;
 
 
 namespace InfrastructureToolKit.Util.InfrastructureToolKitInjection

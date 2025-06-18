@@ -1,4 +1,4 @@
-﻿namespace InfrastructureToolKit.Interfaces.Apis.ApiExternal
+﻿namespace InfrastructureToolKit.Interfaces.Apis.ApiExternal.ApiExternal
 {
     // Interface genérica para consumo de APIs externas
     public interface IApiExternal<T> where T : class

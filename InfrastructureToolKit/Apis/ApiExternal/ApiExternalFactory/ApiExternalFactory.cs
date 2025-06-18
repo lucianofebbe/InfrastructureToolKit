@@ -1,8 +1,8 @@
-﻿using InfrastructureToolKit.Apis.ApiExternal;
-using InfrastructureToolKit.Interfaces.Apis.ApiExternal;
-using InfrastructureToolKit.Interfaces.Apis.ApiExternalFactory;
+﻿using InfrastructureToolKit.Apis.ApiExternal.ApiExternal;
+using InfrastructureToolKit.Interfaces.Apis.ApiExternal.ApiExternal;
+using InfrastructureToolKit.Interfaces.Apis.ApiExternal.ApiExternalFactory;
 
-namespace InfrastructureToolKit.Apis.ApiExternalFactory
+namespace InfrastructureToolKit.Apis.ApiExternal.ApiExternalFactory
 {
     /// <summary>
     /// Fábrica genérica para criação de instâncias de IApiExternal<T>.

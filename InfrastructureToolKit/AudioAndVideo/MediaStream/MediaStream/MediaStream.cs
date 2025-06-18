@@ -1,5 +1,5 @@
-﻿using InfrastructureToolKit.Settings.AudioAndVideo.MediaStream.Settings;
-using Interfaces.AudioAndVideo.MediaStream;
+﻿using InfrastructureToolKit.Interfaces.AudioAndVideo.MediaStream;
+using InfrastructureToolKit.Settings.AudioAndVideo.MediaStream.Settings;
 
 namespace InfrastructureToolKit.AudioAndVideo.MediaStream.MediaStream
 {

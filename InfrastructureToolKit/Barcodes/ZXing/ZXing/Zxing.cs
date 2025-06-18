@@ -1,5 +1,5 @@
-﻿using InfrastructureToolKit.Settings.Barcodes.ZXing.Settings;
-using Interfaces.Barcodes.ZXing.ZXing;
+﻿using InfrastructureToolKit.Interfaces.Barcodes.ZXing.ZXing;
+using InfrastructureToolKit.Settings.Barcodes.ZXing.Settings;
 using SkiaSharp;
 using ZXing;
 using ZXing.Common;

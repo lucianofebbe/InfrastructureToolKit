@@ -1,7 +1,7 @@
-﻿using InfrastructureToolKit.Settings.Images.Settings;
-using Interfaces.Images.Image.Image;
+﻿using InfrastructureToolKit.Interfaces.Images.Image.Image;
+using InfrastructureToolKit.Settings.Images.Settings;
 
-namespace Interfaces.Images.Image.ImageFactory
+namespace InfrastructureToolKit.Interfaces.Images.Image.ImageFactory
 {
     public interface IImagesFactory
     {

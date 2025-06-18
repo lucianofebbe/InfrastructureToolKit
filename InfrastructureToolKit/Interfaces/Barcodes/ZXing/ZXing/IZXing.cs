@@ -1,7 +1,7 @@
 ﻿using InfrastructureToolKit.Settings.Barcodes.ZXing.Settings;
 using SkiaSharp;
 
-namespace Interfaces.Barcodes.ZXing.ZXing
+namespace InfrastructureToolKit.Interfaces.Barcodes.ZXing.ZXing
 {
     public interface IZXing
     {

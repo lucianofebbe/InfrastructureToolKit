@@ -1,6 +1,6 @@
-﻿using InfrastructureToolKit.Settings.Images.Settings;
-using Interfaces.Images.Image.Image;
-using Interfaces.Images.Image.ImageFactory;
+﻿using InfrastructureToolKit.Interfaces.Images.Image.Image;
+using InfrastructureToolKit.Interfaces.Images.Image.ImageFactory;
+using InfrastructureToolKit.Settings.Images.Settings;
 
 namespace InfrastructureToolKit.Images.Image.ImageFactory
 {

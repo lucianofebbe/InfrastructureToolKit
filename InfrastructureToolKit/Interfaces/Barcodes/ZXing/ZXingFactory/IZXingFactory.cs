@@ -1,7 +1,7 @@
-﻿using InfrastructureToolKit.Settings.Barcodes.ZXing.Settings;
-using Interfaces.Barcodes.ZXing.ZXing;
+﻿using InfrastructureToolKit.Interfaces.Barcodes.ZXing.ZXing;
+using InfrastructureToolKit.Settings.Barcodes.ZXing.Settings;
 
-namespace Interfaces.Barcodes.ZXing.ZXingFactory
+namespace InfrastructureToolKit.Interfaces.Barcodes.ZXing.ZXingFactory
 {
     public interface IZXingFactory
     {

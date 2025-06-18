@@ -1,6 +1,6 @@
-﻿using InfrastructureToolKit.Interfaces.Apis.ApiExternal;
+﻿using InfrastructureToolKit.Interfaces.Apis.ApiExternal.ApiExternal;
 
-namespace InfrastructureToolKit.Interfaces.Apis.ApiExternalFactory
+namespace InfrastructureToolKit.Interfaces.Apis.ApiExternal.ApiExternalFactory
 {
     // Interface para fábrica de instâncias da interface IApiExternal<T>
     public interface IApiExternalFactory<T> where T : class

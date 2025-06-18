@@ -1,6 +1,6 @@
 ﻿using InfrastructureToolKit.Settings.Images.Settings;
 
-namespace Interfaces.Images.Image.Image
+namespace InfrastructureToolKit.Interfaces.Images.Image.Image
 {
     public interface IImages
     {

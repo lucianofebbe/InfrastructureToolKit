@@ -1,5 +1,5 @@
-﻿using InfrastructureToolKit.Settings.Images.Settings;
-using Interfaces.Images.Image.Image;
+﻿using InfrastructureToolKit.Interfaces.Images.Image.Image;
+using InfrastructureToolKit.Settings.Images.Settings;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
