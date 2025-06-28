@@ -4,7 +4,7 @@ using InfrastructureToolKit.Settings.DataBases.Dapper.Settings;
 namespace InfrastructureToolKit.Interfaces.DataBase.Dapper.UnitOfWork
 {
     // Interface de Unidade de Trabalho para Dapper, responsável por operações de CRUD e controle de transações
-    public interface IUnitOfWork<T> : IAsyncDisposable
+    public interface IUnitOfWork<T> : IDisposable
         where T : BaseEntitiesSql
     {
         // Insere a entidade no banco de dados utilizando SQL customizado

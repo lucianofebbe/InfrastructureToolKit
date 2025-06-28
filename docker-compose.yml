@@ -1,0 +1,88 @@
+version: '3.9'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "15672:15672"   # Management UI
+      - "5672:5672"     # Broker
+    environment:
+      RABBITMQ_DEFAULT_USER: Admin
+      RABBITMQ_DEFAULT_PASS: Admin
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - infrastructure_sdk
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: Admin
+      MONGO_INITDB_ROOT_PASSWORD: Admin
+      MONGO_INITDB_DATABASE: InfraTests
+    volumes:
+      - mongo_data:/data/db
+      - mongo_config:/data/configdb
+    networks:
+      - infrastructure_sdk
+    restart: always
+
+  redis:
+    image: redis/redis-stack:latest
+    container_name: redis
+    command: /entrypoint.sh
+    environment:
+      REDIS_ARGS: "--maxmemory 256mb --maxmemory-policy allkeys-lru"
+      REDIS_PASSWORD: Admin
+      REDISBLOOM_ARGS: ""
+      REDISEARCH_ARGS: ""
+      REDISJSON_ARGS: ""
+      REDISTIMESERIES_ARGS: ""
+      PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    ports:
+      - "6379:6379"
+    volumes:
+      - testproject_redis_data:/data
+    networks:
+      - infrastructure_sdk
+    restart: unless-stopped
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    entrypoint: /opt/mssql/bin/launch_sqlservr.sh
+    command: /opt/mssql/bin/sqlservr
+    user: mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Admin123!"
+      PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      MSSQL_RPC_PORT: "135"
+      CONFIG_EDGE_BUILD: ""
+      MSSQL_PID: "developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - C:\Users\lucia\Documents\Empresa\Arquiteturas\Infrastructure\TestProject\data\sqlserver:/var/opt/mssql/data:rw
+    networks:
+      - infrastructure_sdk
+    restart: "no"
+
+volumes:
+  rabbitmq_data:
+    external: false
+  mongo_data:
+    external: false
+  mongo_config:
+    external: false
+  testproject_redis_data:
+    external: true
+
+networks:
+  infrastructure_sdk:
+    external: true

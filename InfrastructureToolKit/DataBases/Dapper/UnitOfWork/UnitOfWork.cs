@@ -21,7 +21,9 @@ namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWork
         public UnitOfWork(ConnectionSettings settings)
         {
             connection = settings.Connection;
-            connection.Open();
+
+            if (connection.State != ConnectionState.Open)
+                connection.Open();
         }
 
         // Insere uma entidade usando o SQL passado, retorna a entidade com o Id atualizado
@@ -32,6 +34,8 @@ namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWork
             else
                 commandSettings.Entity.Id = await connection.ExecuteAsync(commandSettings.Query, commandSettings.Parameters, transaction, commandType: GetCommand(commandSettings));
 
+            Dispose();
+
             return commandSettings.Entity;
         }
 
@@ -40,6 +44,7 @@ namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWork
         {
             await connection
                 .ExecuteAsync(commandSettings.Query, commandSettings.Parameters, transaction, commandType: GetCommand(commandSettings));
+            Dispose();
             return commandSettings.Entity;
         }
 
@@ -51,19 +56,23 @@ namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWork
 
             var parameters = new { commandSettings.Entity.Guid, commandSettings.Entity.Id, Updated = DateTime.UtcNow };
             var affected = await connection.ExecuteAsync(sql, parameters, transaction, commandType: GetCommand(commandSettings));
+            Dispose();
             return affected > 0;
         }
 
         // Obtém uma entidade específica pelo SQL e parâmetros fornecidos
         public virtual async Task<T> GetAsync(CommandSettings<T> commandSettings)
         {
-            return await connection.QueryFirstOrDefaultAsync<T>(commandSettings.Query, commandSettings.Parameters, transaction, commandType: GetCommand(commandSettings));
+            var result = await connection.QueryFirstOrDefaultAsync<T>(commandSettings.Query, commandSettings.Parameters, transaction, commandType: GetCommand(commandSettings));
+            Dispose();
+            return result;
         }
 
         // Obtém uma lista de entidades com parâmetros opcionais para paginação
         public virtual async Task<List<T>> GetAllAsync(CommandSettings<T> commandSettings)
         {
             var result = await connection.QueryAsync<T>(commandSettings.Query, commandSettings.Parameters, transaction, commandType: GetCommand(commandSettings));
+            Dispose();
             return result.ToList();
         }
 
@@ -88,7 +97,7 @@ namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWork
         // Inicia uma transação se ainda não houver uma ativa
         public virtual async Task BeginTransactionAsync()
         {
-            if (transaction.Connection != null)
+            if (transaction != null && transaction.Connection != null)
                 transaction = connection.BeginTransaction();
         }
 
@@ -100,15 +109,18 @@ namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWork
             return await Task.FromResult(true);
         }
 
-        // Descarta a transação se não tiver sido comitada e libera recursos
-        public virtual async ValueTask DisposeAsync()
+        public void Dispose()
         {
-            if (!_committed)
-                transaction.Rollback();
+            if (transaction != null && transaction.Connection != null)
+            {
+                if (!_committed)
+                    transaction.Rollback();
 
-            transaction.Dispose();
+                transaction.Dispose();
+            }
+
+            connection.Close();
             connection.Dispose();
-            await Task.CompletedTask;
         }
     }
 }
