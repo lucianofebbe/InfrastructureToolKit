@@ -11,7 +11,7 @@ namespace InfrastructureToolKit.Interfaces.DataBase.AdoNet.Ado
         Task<DataTable> ExecuteQueryAsync(CommandSettings commandSettings);
 
         // Executa um comando que não retorna resultado (ex: INSERT, UPDATE, DELETE)
-        Task<int> ExecuteNonQueryAsync(CommandSettings commandSettings);
+        Task<Object> ExecuteNonQueryAsync(CommandSettings commandSettings);
 
         //Converte DataTable para lista, mas somente tipos simples, cuidado com os nomes dos tipos, tem que ser identicos
         //tipos complexos, utilize uma implementacao propria.

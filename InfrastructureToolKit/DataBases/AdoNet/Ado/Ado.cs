@@ -61,11 +61,11 @@ namespace InfrastructureToolKit.DataBases.AdoNet.Ado
         }
 
         // Executa comando não query (insert, update, delete), suporta ExecuteScalar para retornar valor
-        public virtual async Task<int> ExecuteNonQueryAsync(CommandSettings commandSettings)
+        public virtual async Task<Object> ExecuteNonQueryAsync(CommandSettings commandSettings)
         {
             await connection.OpenAsync(commandSettings.CancellationToken);
 
-            int result;
+            Object result;
             await using var command = connection.CreateCommand();
             command.CommandText = commandSettings.Query;
             command.Transaction = transaction;
@@ -85,8 +85,7 @@ namespace InfrastructureToolKit.DataBases.AdoNet.Ado
 
             if (commandSettings.ExecuteScalar)
             {
-                var scalarResult = await command.ExecuteScalarAsync(commandSettings.CancellationToken);
-                result = Convert.ToInt32(scalarResult);
+                result = await command.ExecuteScalarAsync(commandSettings.CancellationToken);
             }
             else
                 result = await command.ExecuteNonQueryAsync(commandSettings.CancellationToken);

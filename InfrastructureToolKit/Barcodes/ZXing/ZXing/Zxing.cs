@@ -16,11 +16,11 @@ namespace InfrastructureToolKit.Barcodes.ZXing.ZXing
             this.settings = settings;
         }
 
-        public virtual async Task<SKBitmap> GenerateAsync(ZxingParametersSettings parameters)
+        public virtual async Task<SKBitmap> GenerateAsync(GenerateZxingParameters parameters)
         {
             var writer = new BarcodeWriter<SKBitmap>
             {
-                Format = settings.Format,
+                Format = (BarcodeFormat)settings.BarCodeFormat,
                 Options = new EncodingOptions
                 {
                     Width = settings.Width,
@@ -33,10 +33,10 @@ namespace InfrastructureToolKit.Barcodes.ZXing.ZXing
             return writer.Write(parameters.Content);
         }
 
-        public virtual async Task SaveAsync(ZxingParametersSettings parameters)
+        public virtual async Task SaveAsync(SaveZxingParameters parameters)
         {
             using var imagem = SKImage.FromBitmap(parameters.Bitmap);
-            using var dados = imagem.Encode(parameters.Format, parameters.Quality);
+            using var dados = imagem.Encode((SKEncodedImageFormat)settings.EncodedImage, settings.Quality);
             using var fs = File.OpenWrite(parameters.FilePath);
             dados.SaveTo(fs);
         }

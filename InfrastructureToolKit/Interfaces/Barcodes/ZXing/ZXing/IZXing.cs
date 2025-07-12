@@ -5,7 +5,7 @@ namespace InfrastructureToolKit.Interfaces.Barcodes.ZXing.ZXing
 {
     public interface IZXing
     {
-        Task<SKBitmap> GenerateAsync(ZxingParametersSettings parameters);
-        Task SaveAsync(ZxingParametersSettings parameters);
+        Task<SKBitmap> GenerateAsync(GenerateZxingParameters parameters);
+        Task SaveAsync(SaveZxingParameters parameters);
     }
 }

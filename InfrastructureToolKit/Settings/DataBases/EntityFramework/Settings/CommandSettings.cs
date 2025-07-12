@@ -7,6 +7,7 @@ namespace InfrastructureToolKit.Settings.DataBases.EntityFramework.Settings
     {
         public T Entity { get; set; }
         public Expression<Func<T, bool>> Predicate { get; set; }
+        public string Query { get; set; }
         public bool NoTracking { get; set; }
         public int Skip { get; set; }
         public int Take { get; set; }

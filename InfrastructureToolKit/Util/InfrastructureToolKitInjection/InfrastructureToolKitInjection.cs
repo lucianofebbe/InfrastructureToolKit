@@ -43,7 +43,6 @@ namespace InfrastructureToolKit.Util.InfrastructureToolKitInjection
             services.AddScoped(typeof(Interfaces.DataBase.RedisDb.UnitOfWorkFactory.IUnitOfWorkFactory<>), typeof(DataBases.RedisDb.UnitOfWorkFactory.UnitOfWorkFactory<>));
             services.AddScoped(typeof(IEmailFactory), typeof(EmailFactory));
             services.AddScoped(typeof(ILogFactory), typeof(LogFactory));
-            services.AddScoped(typeof(IMapperFactory<BaseEntitiesSql, BaseEntitiesMongoDb, BaseEntitiesRedisDb, BaseRequest, BaseResponse>), typeof(MapperFactory<BaseEntitiesSql, BaseEntitiesMongoDb, BaseEntitiesRedisDb, BaseRequest, BaseResponse>));
             services.AddScoped(typeof(IMapperSpecificFactory<Object, Object>), typeof(MapperSpecificFactory<Object, Object>));
             services.AddSingleton(typeof(IkafkaMQFactory), typeof(kafkaMQFactory));
             services.AddSingleton(typeof(IRabbitMQFactory), typeof(RabbitMQFactory));
