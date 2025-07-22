@@ -27,16 +27,17 @@ namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWork
         }
 
         // Insere uma entidade usando o SQL passado, retorna a entidade com o Id atualizado
-        public virtual async Task<T> InsertAsync(CommandSettings<T> commandSettings)
+        public virtual async Task<object> InsertAsync(CommandSettings<T> commandSettings)
         {
+            object result;
             if (commandSettings.ExecuteScalar)
-                commandSettings.Entity.Id = await connection.ExecuteScalarAsync<int>(commandSettings.Query, commandSettings.Parameters, transaction, commandType: GetCommand(commandSettings));
+                result = await connection.ExecuteScalarAsync(commandSettings.Query, commandSettings.Parameters, transaction, commandType: GetCommand(commandSettings));
             else
-                commandSettings.Entity.Id = await connection.ExecuteAsync(commandSettings.Query, commandSettings.Parameters, transaction, commandType: GetCommand(commandSettings));
+                result = await connection.ExecuteAsync(commandSettings.Query, commandSettings.Parameters, transaction, commandType: GetCommand(commandSettings));
 
             Dispose();
 
-            return commandSettings.Entity;
+            return result;
         }
 
         // Atualiza uma entidade no banco de dados e retorna a entidade atualizada
@@ -49,6 +50,17 @@ namespace InfrastructureToolKit.DataBases.Dapper.UnitOfWork
         }
 
         // Marca a entidade como deletada (soft delete) com base em Guid ou Id
+        public virtual async Task<bool> DeleteSoftAsync(CommandSettings<T> commandSettings)
+        {
+            var guidOrId = commandSettings.Entity.Guid != Guid.Empty ? "Guid = @Guid" : "Id = @Id";
+            var sql = $"UPDATE {typeof(T).Name} SET Deleted = 1, Updated = @Updated WHERE {guidOrId}";
+
+            var parameters = new { commandSettings.Entity.Guid, commandSettings.Entity.Id, Updated = DateTime.UtcNow };
+            var affected = await connection.ExecuteAsync(sql, parameters, transaction, commandType: GetCommand(commandSettings));
+            Dispose();
+            return affected > 0;
+        }
+
         public virtual async Task<bool> DeleteAsync(CommandSettings<T> commandSettings)
         {
             var guidOrId = commandSettings.Entity.Guid != Guid.Empty ? "Guid = @Guid" : "Id = @Id";

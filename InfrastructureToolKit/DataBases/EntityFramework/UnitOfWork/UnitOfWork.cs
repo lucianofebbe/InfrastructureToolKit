@@ -30,8 +30,6 @@ namespace InfrastructureToolKit.DataBases.EntityFramework.UnitOfWork
 
             if (commandSettings.Deleteds != null)
                 query = query.Where(del => del.Deleted == commandSettings.Deleteds);
-            else
-                query = query.Where(del => del.Deleted == false);
 
             if (commandSettings.NoTracking)
                 query = query.AsNoTracking();
@@ -48,8 +46,6 @@ namespace InfrastructureToolKit.DataBases.EntityFramework.UnitOfWork
 
             if (commandSettings.Deleteds != null)
                 query = query.Where(del => del.Deleted == commandSettings.Deleteds);
-            else
-                query = query.Where(del => del.Deleted == false);
 
             if (commandSettings.NoTracking)
                 query = query.AsNoTracking();
@@ -79,7 +75,7 @@ namespace InfrastructureToolKit.DataBases.EntityFramework.UnitOfWork
             return entidade;
         }
 
-        public virtual async Task<bool> DeleteAsync(CommandSettings<T> commandSettings)
+        public virtual async Task<bool> DeleteSoftAsync(CommandSettings<T> commandSettings)
         {
             var resultFind = Activator.CreateInstance<T>();
 
@@ -108,6 +104,34 @@ namespace InfrastructureToolKit.DataBases.EntityFramework.UnitOfWork
             return false;
         }
 
+        public virtual async Task<bool> DeleteAsync(CommandSettings<T> commandSettings)
+        {
+            var resultFind = Activator.CreateInstance<T>();
+
+            if (commandSettings.Entity.Id > 0 && commandSettings.Entity.Guid != Guid.Empty)
+                throw new InvalidOperationException("Only one identifier (Id or Guid) should be provided for deletion.");
+
+            if (commandSettings.Entity.Id > 0)
+            {
+                commandSettings.Predicate = a => a.Id == commandSettings.Entity.Id;
+                resultFind = await GetAsync(commandSettings);
+            }
+
+            if (commandSettings.Entity.Guid != Guid.Empty)
+            {
+                commandSettings.Predicate = a => a.Guid == commandSettings.Entity.Guid;
+                resultFind = await GetAsync(commandSettings);
+            }
+
+            if (resultFind.Id > 0)
+            {
+                connectionSettings.Context.Entry(resultFind).State = EntityState.Deleted;
+                return true;
+            }
+
+            return false;
+        }
+
         public virtual async Task<T> InsertAndSaveAsync(CommandSettings<T> commandSettings)
         {
             var result = await InsertAsync(commandSettings.Entity);
@@ -119,6 +143,14 @@ namespace InfrastructureToolKit.DataBases.EntityFramework.UnitOfWork
         {
             var result = await UpdateAsync(commandSettings.Entity);
             await connectionSettings.Context.SaveChangesAsync(commandSettings.CancellationToken);
+            return result;
+        }
+
+        public virtual async Task<bool> DeleteSoftAndSaveAsync(CommandSettings<T> commandSettings)
+        {
+            var result = await DeleteSoftAsync(commandSettings);
+            if (result)
+                await connectionSettings.Context.SaveChangesAsync(commandSettings.CancellationToken);
             return result;
         }
 

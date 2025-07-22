@@ -23,6 +23,8 @@ namespace InfrastructureToolKit.Interfaces.DataBase.EntityFramework.UnitOfWork
         Task<T> UpdateAsync(T entidade);
 
         // Deleta uma entidade (sem salvar alterações no banco)
+        Task<bool> DeleteSoftAsync(CommandSettings<T> commandSettings);
+
         Task<bool> DeleteAsync(CommandSettings<T> commandSettings);
 
         // Insere e salva imediatamente no banco
@@ -32,6 +34,8 @@ namespace InfrastructureToolKit.Interfaces.DataBase.EntityFramework.UnitOfWork
         Task<T> UpdateAndSaveAsync(CommandSettings<T> commandSettings);
 
         // Deleta e salva imediatamente no banco
+        Task<bool> DeleteSoftAndSaveAsync(CommandSettings<T> commandSettings);
+
         Task<bool> DeleteAndSaveAsync(CommandSettings<T> commandSettings);
 
         // Inicia uma transação

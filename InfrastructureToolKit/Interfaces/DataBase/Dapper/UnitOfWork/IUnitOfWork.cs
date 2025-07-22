@@ -8,10 +8,13 @@ namespace InfrastructureToolKit.Interfaces.DataBase.Dapper.UnitOfWork
         where T : BaseEntitiesSql
     {
         // Insere a entidade no banco de dados utilizando SQL customizado
-        Task<T> InsertAsync(CommandSettings<T> commandSettings);
+        Task<object> InsertAsync(CommandSettings<T> commandSettings);
 
         // Atualiza a entidade no banco de dados utilizando SQL customizado
         Task<T> UpdateAsync(CommandSettings<T> commandSettings);
+
+        // Exclui a entidade do banco de dados
+        Task<bool> DeleteSoftAsync(CommandSettings<T> commandSettings);
 
         // Exclui a entidade do banco de dados
         Task<bool> DeleteAsync(CommandSettings<T> commandSettings);
